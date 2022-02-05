@@ -1,17 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
+
+<head>
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title><%= htmlWebpackPlugin.options.title %></title>
-  </head>
-  <body>
-    <noscript>
-      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
-  </body>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alpine Form</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <form>
+            <div class="form-control">
+                <label for="user-name">Your Name</label>
+                <input type="text" name="user-name" id="user-name">
+            </div>
+            <div class="form-control">
+                <label for="age">Your Age (Years)</label>
+                <input type="text" name="age" id="age">
+            </div>
+            <div class="form-control">
+                <label for="referrer">How did you hear about us ?</label>
+                <select name="referrer" id="referrer">
+                    <option value="google">Google</option>
+                    <option value="wom">Word of mouth</option>
+                    <option value="newspaper">Newspaper</option>
+                </select>
+            </div>
+            <div class="form-control">
+                <h2>What are you interested in ?</h2>
+                <div>
+                    <input type="checkbox" name="interest" id="interest-news">
+                    <label for="interest-news">News</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="interest" id="interest-tutorials">
+                    <label for="interest-tutorials">Tutorials</label>
+                </div>
+                <div>
+                    <input type="text" name="interest" id="interest-nothing">
+                    <label for="interest-nothing">Nothing</label>
+                </div>
+            </div>
+            <div class="form-control">
+                <h2>How do you learn ?</h2>
+                <div>
+                    <input type="radio" name="how" id="how-video">
+                    <label for="how-video">Video Courses</label>
+                </div>
+                <div>
+                    <input type="radio" name="how" id="how-blogs">
+                    <label for="how-blogs">Blogs</label>
+                </div>
+                <div>
+                    <input type="radio" name="how" id="how-other">
+                    <label for="how-other">Other</label>
+                </div>
+            </div>
+            <div>
+                <button>Save Data</button>
+            </div>
+        </form>
+    </div>
+    <script>
+        
+    </script>
+</body>
+
 </html>
